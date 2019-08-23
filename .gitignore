@@ -1,0 +1,8 @@
+# Dependencies directory
+node_modules
+
+# ParcelJS cache directory (https://parceljs.org)
+.cache
+
+# Compiled output
+dist
