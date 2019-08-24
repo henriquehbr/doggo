@@ -1,4 +1,7 @@
-//- Essential meta tags
+//-
+	╔═════════════════════════╗
+	║   Essential meta tags   ║
+	╚═════════════════════════╝
 mixin charset(charset)
 	meta(charset=charset ? charset : "utf-8")
 
@@ -6,7 +9,7 @@ mixin viewport(viewport)
 	meta(name="viewport" content=viewport ? viewport : "width=device-width, initial-scale=1.0")
 
 mixin ie-support(version)
-	meta(http-equiv="X-UA-Compatible" content=content ? content : "ie=edge")
+	meta(http-equiv="X-UA-Compatible" content=version ? `ie=${version}` : "ie=edge")
 
 mixin keywords(keywords)
 	if Array.isArray(keywords)
@@ -16,7 +19,10 @@ mixin keywords(keywords)
 mixin description(description)
 	meta(name="description" content=description)
 
-//- Optional meta tags
+//-
+	╔════════════════════════╗
+	║   Optional meta tags   ║
+	╚════════════════════════╝
 mixin subject(subject)
 	meta(name="subject" content=subject)
 
@@ -33,7 +39,10 @@ mixin robots(content)
 mixin revised(date)
 	meta(name="revised" content=date)
 
-//- OpenGraph meta tags
+//-
+	╔═════════════════════════╗
+	║   OpenGraph meta tags   ║
+	╚═════════════════════════╝
 mixin og-title(title)
 	meta(name="og:title" content=title)
 
