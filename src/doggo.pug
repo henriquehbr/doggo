@@ -77,8 +77,25 @@ mixin favicon(imageUrl)
 		- imageExt = getImageExtRegex.exec(imageUrl)
 		link(rel="shortcut icon" type="image/#{imageExt[1]}" href=imageUrl)
 
-mixin stylesheet(url)
+mixin css(url)
 	link(rel="stylesheet" href=url)
 
-mixin script(url)
+mixin js(url)
 	script(src=url)
+
+//- Experimental
+mixin table(thead)
+	if Array.isArray(thead)
+		table
+			thead
+				tr
+					each header in thead
+						th= header
+			tbody
+				block
+
+mixin tr(row)
+	if Array.isArray(row)
+		tr
+			each data in row
+				td= data
