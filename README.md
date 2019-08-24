@@ -36,6 +36,6 @@ meta(name="keywords" content="lorem, ipsum, lorem ipsum, lipsum")
 +charset
 +viewport
 +description("Lorem ipsum dolor sit amet consectetur")
-+ie-support("edge")
++ie-support
 +keywords(["lorem", "ipsum", "lorem ipsum", "lipsum"])
 ```
